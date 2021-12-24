@@ -19,23 +19,43 @@ namespace AMONIC
     /// </summary>
     public partial class WinEditRole : Window
     {
-        public WinEditRole()
+        public WinEditRole(Users users)
         {
-            InitializeComponent();
-            AddEmailAddress.IsEnabled = false;
-            AddFirstName.IsEnabled = false;
-            AddLastName.IsEnabled = false;
             CbOffice.IsEnabled = false;
+            DataContext = users;
+            AddEmailAddress.Text = users.Email;
+            AddFirstName.Text = users.Name;
+            AddLastName.Text = users.Surname;
+            CbOffice.SelectedValue = users.Ofice;
+            if (users.Role == 1)
+            {
+                RAdmin.IsChecked = true;
+            }
+            else
+            {
+                RUser.IsChecked = true;
+            }
         }
 
         private void BtApply_Click(object sender, RoutedEventArgs e)
         {
-
+            var users = DataContext as Users;
+            if (RAdmin.IsChecked == true)
+            {
+                users.Role = 1;
+            }
+            else
+            {
+                users.Role = 2;
+            }
+            Helper.GetEntities().SaveChanges();
         }
 
         private void BtCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

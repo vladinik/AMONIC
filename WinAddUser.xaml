@@ -20,17 +20,17 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Name="TbEA" Text="Email Address" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
-        <TextBlock Name="TbFN" Text="First Name" Grid.Row="1" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
-        <TextBlock Name="TbLN" Text="Last Name" Grid.Row="2" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
-        <TextBlock Name="TbO" Text="Office" Grid.Row="3" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
-        <TextBlock Name="TbBD" Text="BritthDate" Grid.Row="4" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
-        <TextBlock Name="TbP" Text="Password" Grid.Row="5" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
-        <TextBox Name="AddEmailAddress" Grid.Column="1" Margin="15"></TextBox>
-        <TextBox Name="AddFirstName" Grid.Column="1" Grid.Row="1" Margin="15"></TextBox>
-        <TextBox Name="AddLastName" Grid.Column="1" Grid.Row="2" Margin="15"></TextBox>
+        <TextBlock Name="TbEA" Text="Email Address" Margin="0,20,20,20" Style="{StaticResource tblStyle}" Width="82"></TextBlock>
+        <TextBlock Name="TbFN" Text="First Name" Grid.Row="1" Margin="0,20,20,20" Style="{StaticResource tblStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbLN" Text="Last Name" Grid.Row="2" Margin="0,20,20,20" Style="{StaticResource tblStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbO" Text="Office" Grid.Row="3" Margin="0,20,20,20" Style="{StaticResource tblStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbBD" Text="BritthDate" Grid.Row="4" Margin="0,20,20,20" Style="{StaticResource tblStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbP" Text="Password" Grid.Row="5" Margin="0,20,20,20" Style="{StaticResource tblStyle}" Width="71"></TextBlock>
+        <TextBox Name="AddEmailAddress" Grid.Column="1" Margin="15" Style="{StaticResource tbStyle}" Text="{Binding Email}"></TextBox>
+        <TextBox Name="AddFirstName" Grid.Column="1" Grid.Row="1" Margin="15" Style="{StaticResource tbStyle}" Text="{Binding Name}"></TextBox>
+        <TextBox Name="AddLastName" Grid.Column="1" Grid.Row="2" Margin="15" Style="{StaticResource tbStyle}" Text="{Binding Surname}"></TextBox>
         <ComboBox Name="CbOffice" Grid.Column="1" Grid.Row="3" SelectedIndex="0" Margin="15" DisplayMemberPath="Title" SelectedValuePath="ID"></ComboBox>
-        <DatePicker Name="DpBrithDate" Grid.Column="1" Grid.Row="4" Margin="15" ></DatePicker>
+        <DatePicker Name="DpBrithDate" Grid.Column="1" Grid.Row="4" Margin="15"></DatePicker>
         <PasswordBox Name="PbPassword" Grid.Row="5" Grid.Column="1" Margin="15"></PasswordBox>
         <Button Name="BtSave" Grid.Row="6" Margin="100 10 0 10" Content="Save" Click="BtSave_Click"></Button>
         <Button Name="BtCancel" Content="Cancel" Grid.Column="1" Grid.Row="6" Margin="10 10 100 10" Click="BtCancel_Click"></Button>

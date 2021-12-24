@@ -20,9 +20,9 @@ namespace AMONIC
     /// </summary>
     public partial class MainWindow : Window
     {
-        //List<Offices> offices = Helper.GetEntities().Offices.ToList();
+        
         List<Users> users = new List<Users>();
-        //List<UserRole> userRoles = new List<UserRole>();
+        
         public MainWindow()
         {
 
@@ -56,9 +56,28 @@ namespace AMONIC
 
         private void BtnChangeRole_Click(object sender, RoutedEventArgs e)
         {
-            WinEditRole winEditRole = new WinEditRole();
-            winEditRole.Show();
-            this.Hide();
+            if (DgListUser.Items.Count > 0)
+            {
+                var index = DgListUser.SelectedItem;
+
+                using (UserOficeEntities db = new UserOficeEntities())
+                {
+                    if (DgListUser.SelectedItem is Users users)
+                    {
+                        WinEditRole winEditRole = new WinEditRole(users);
+                        winEditRole.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не выбран пользователь");
+            }
         }
 
         private void BtnEnableDisableLogin_Click(object sender, RoutedEventArgs e)
