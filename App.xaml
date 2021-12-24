@@ -4,6 +4,25 @@
              xmlns:local="clr-namespace:AMONIC"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Window" x:Key="DefaultWindows">
+            <Setter Property="MaxHeight" Value="450"/>
+            <Setter Property="MinWidth" Value="800"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="tblStyle">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="tbStyle">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Width" Value="300"/>
+        </Style>
+        <Style TargetType="PasswordBox" x:Key="pbStyle">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Width" Value="300"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Width" Value="200"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="AMONIC.WinAddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMONIC"
+        mc:Ignorable="d"
+        Title="WinAddUser" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Name="TbEA" Text="Email Address" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbFN" Text="First Name" Grid.Row="1" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbLN" Text="Last Name" Grid.Row="2" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbO" Text="Office" Grid.Row="3" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbBD" Text="BritthDate" Grid.Row="4" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock Name="TbP" Text="Password" Grid.Row="5" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBox Name="AddEmailAddress" Grid.Column="1" Margin="15"></TextBox>
+        <TextBox Name="AddFirstName" Grid.Column="1" Grid.Row="1" Margin="15"></TextBox>
+        <TextBox Name="AddLastName" Grid.Column="1" Grid.Row="2" Margin="15"></TextBox>
+        <ComboBox Name="CbOffice" Grid.Column="1" Grid.Row="3" SelectedIndex="0" Margin="15" DisplayMemberPath="Title" SelectedValuePath="ID"></ComboBox>
+        <DatePicker Name="DpBrithDate" Grid.Column="1" Grid.Row="4" Margin="15" ></DatePicker>
+        <PasswordBox Name="PbPassword" Grid.Row="5" Grid.Column="1" Margin="15"></PasswordBox>
+        <Button Name="BtSave" Grid.Row="6" Margin="100 10 0 10" Content="Save" Click="BtSave_Click"></Button>
+        <Button Name="BtCancel" Content="Cancel" Grid.Column="1" Grid.Row="6" Margin="10 10 100 10" Click="BtCancel_Click"></Button>
+    </Grid>
+</Window>

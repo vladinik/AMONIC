@@ -77,11 +77,20 @@
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
     <Compile Include="Partial.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserRole.cs">
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WinAddUser.xaml.cs">
+      <DependentUpon>WinAddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinEditRole.xaml.cs">
+      <DependentUpon>WinEditRole.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +104,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WinAddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinEditRole.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OfficesUser.Context.cs">

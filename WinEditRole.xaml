@@ -1,0 +1,37 @@
+﻿<Window x:Class="AMONIC.WinEditRole"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMONIC"
+        mc:Ignorable="d"
+        Title="WinEditRole" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock  Text="Email Address" Margin="104,20,115,20" Style="{StaticResource tbStyle}" Width="Auto"></TextBlock>
+        <TextBlock  Text="First Name" Grid.Row="1" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock  Text="Last Name" Grid.Row="2" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock  Text="Office" Grid.Row="3" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBlock Text="Role" Grid.Row="4" Margin="0,20,20,20" Style="{StaticResource tbStyle}" Width="71"></TextBlock>
+        <TextBox  Name="AddEmailAddress" Grid.Column="1" Margin="15"></TextBox>
+        <TextBox Name="AddFirstName" Grid.Column="1" Grid.Row="1" Margin="15"></TextBox>
+        <TextBox Name="AddLastName" Grid.Column="1" Grid.Row="2" Margin="15"></TextBox>
+        <ComboBox Name="CbOffice" Grid.Column="1" Grid.Row="3" Margin="15"></ComboBox>
+        <RadioButton Content="Админестратор" Grid.Column="1" Grid.Row="4" Margin="20 35 20 0"></RadioButton>
+        <RadioButton Content="Пользователь" Grid.Column="1" Grid.Row="5" Margin="20 0 20 35"></RadioButton>
+        <Button Name="BtApply" Grid.Row="6" Margin=" 90 10 10 10" Content="Apply" Click="BtApply_Click"></Button>
+        <Button Name="BtCancel" Content="Cancel" Click="BtCancel_Click" Grid.Column="1" Grid.Row="6" Margin="10 10 80 10"></Button>
+    </Grid>
+</Window>

@@ -29,5 +29,6 @@ namespace AMONIC
         public virtual DbSet<Offices> Offices { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

@@ -40,10 +40,25 @@ namespace AMONIC
             CbNameOffices.ItemsSource = cbm;
             
         }
+        public void LoadUser()
+        {
+            if(CbNameOffices.SelectedIndex==0)
+            {
+                DgListUser.ItemsSource = Helper.GetEntities().Users.ToList();
+            } 
+            else
+            {
+                var office = CbNameOffices.SelectedItem as Offices;
+                var user = Helper.GetEntities().Users.Where(x => x.Ofice == office.ID).ToList();
+                DgListUser.ItemsSource = user;
+            }
+        }
 
         private void BtnChangeRole_Click(object sender, RoutedEventArgs e)
         {
-
+            WinEditRole winEditRole = new WinEditRole();
+            winEditRole.Show();
+            this.Hide();
         }
 
         private void BtnEnableDisableLogin_Click(object sender, RoutedEventArgs e)
@@ -51,14 +66,21 @@ namespace AMONIC
 
         }
 
-        private void TbAddUser_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("DA");
-        }
-
         private void TbExit_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void CbNameOffices_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LoadUser();
+        }
+
+        private void TBAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WinAddUser winAddUser = new WinAddUser();
+            winAddUser.Show();
+            this.Hide();
         }
     }
 }
