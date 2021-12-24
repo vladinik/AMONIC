@@ -28,7 +28,7 @@
         <TextBox  Name="AddEmailAddress" Grid.Column="1" Margin="15" Text="{Binding Email}" IsReadOnly="True" Style="{StaticResource tbStyle}"></TextBox>
         <TextBox Name="AddFirstName" Grid.Column="1" Grid.Row="1" Margin="15" Text="{Binding Name}"  IsReadOnly="True" Style="{StaticResource tbStyle}" ></TextBox>
         <TextBox Name="AddLastName" Grid.Column="1" Grid.Row="2" Margin="15" Text="{Binding Surname}" IsReadOnly="True" Style="{StaticResource tbStyle}"></TextBox>
-        <ComboBox Name="CbOffice" Grid.Column="1" Grid.Row="3" Margin="15" DisplayMemberPath="Title" Text="{Binding Ofice}"></ComboBox>
+        <ComboBox Name="CbOffice" Grid.Column="1" Grid.Row="3" Margin="15" DisplayMemberPath="Title" Text="{Binding Ofice}" SelectedValuePath="ID"></ComboBox>
         <RadioButton Content="Админестратор" Grid.Column="1" Grid.Row="4" Margin="20 35 20 0" Name="RAdmin"></RadioButton>
         <RadioButton Content="Пользователь" Grid.Column="1" Grid.Row="5" Margin="20 0 20 35" Name="RUser"></RadioButton>
         <Button Name="BtApply" Grid.Row="6" Margin=" 90 10 10 10" Content="Apply" Click="BtApply_Click"></Button>

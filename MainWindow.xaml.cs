@@ -85,11 +85,6 @@ namespace AMONIC
 
         }
 
-        private void TbExit_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
         private void CbNameOffices_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             LoadUser();
@@ -100,6 +95,11 @@ namespace AMONIC
             WinAddUser winAddUser = new WinAddUser();
             winAddUser.Show();
             this.Hide();
+        }
+
+        private void TbExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

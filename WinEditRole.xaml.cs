@@ -21,6 +21,12 @@ namespace AMONIC
     {
         public WinEditRole(Users users)
         {
+            InitializeComponent();
+            var user = Helper.GetEntities().Offices.ToList();
+            CbOffice.ItemsSource = user;
+            AddEmailAddress.IsEnabled = false;
+            AddFirstName.IsEnabled=false;
+            AddLastName.IsEnabled=false;
             CbOffice.IsEnabled = false;
             DataContext = users;
             AddEmailAddress.Text = users.Email;
@@ -35,6 +41,7 @@ namespace AMONIC
             {
                 RUser.IsChecked = true;
             }
+
         }
 
         private void BtApply_Click(object sender, RoutedEventArgs e)
@@ -49,6 +56,10 @@ namespace AMONIC
                 users.Role = 2;
             }
             Helper.GetEntities().SaveChanges();
+            MessageBox.Show("Данные изменены");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
         }
 
         private void BtCancel_Click(object sender, RoutedEventArgs e)

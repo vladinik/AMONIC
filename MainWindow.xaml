@@ -47,7 +47,7 @@
             <ToggleButton x:Name="TBAdd" Content="Add user" Click="TBAdd_Click"></ToggleButton>
             <Separator>
             </Separator>
-            <ToggleButton Content="Exit"></ToggleButton>
+            <ToggleButton Name="TbExit"  Click="TbExit_Click" Content="Exit"></ToggleButton>
         </ToolBar>
     </Grid>
 </Window>
