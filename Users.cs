@@ -22,7 +22,7 @@ namespace AMONIC
         public string Surname { get; set; }
         public int Ofice { get; set; }
         public Nullable<System.DateTime> DateBirth { get; set; }
-        public bool Active { get; set; }
+        public Nullable<bool> Active { get; set; }
     
         public virtual Offices Offices { get; set; }
         public virtual UserRole UserRole { get; set; }

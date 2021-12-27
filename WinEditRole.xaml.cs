@@ -19,6 +19,7 @@ namespace AMONIC
     /// </summary>
     public partial class WinEditRole : Window
     {
+        
         public WinEditRole(Users users)
         {
             InitializeComponent();

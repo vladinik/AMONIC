@@ -31,6 +31,7 @@ namespace AMONIC
             offices.Insert(0, new Offices() { Title = "Office name" });
             CbOffice.ItemsSource = offices;
         }
+        
 
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
@@ -43,11 +44,11 @@ namespace AMONIC
                 user.Name = AddFirstName.Text;
                 user.Surname = AddLastName.Text;
                 user.DateBirth = DpBrithDate.SelectedDate.Value;
-                user.Password = PbPassword.Password;
+                user.Password = Helper.MD5Hash(PbPassword.Password);
                 user.Ofice = (int)CbOffice.SelectedValue;
-
-                db.Users.Add(user);
-                db.SaveChanges();
+                
+                Helper.GetEntities().Users.Add(user);
+                Helper.GetEntities().SaveChanges();
                 MessageBox.Show("Пользователь добавлен!");
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();

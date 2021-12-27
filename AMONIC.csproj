@@ -92,6 +92,12 @@
     <Compile Include="WinEditRole.xaml.cs">
       <DependentUpon>WinEditRole.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinLogin.xaml.cs">
+      <DependentUpon>WinLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinUser.xaml.cs">
+      <DependentUpon>WinUser.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -109,6 +115,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinEditRole.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +172,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="demP3D6SeeA.jpg" />
     <Content Include="OfficesUser.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>OfficesUser.Context.cs</LastGenOutput>

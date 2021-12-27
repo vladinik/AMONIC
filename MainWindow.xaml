@@ -42,7 +42,7 @@
         <Button Grid.Row="3" Margin="10" Content="Изменить роль" FontSize="16" Name="BtnChangeRole" Click="BtnChangeRole_Click" Width="Auto"></Button>
         <Button Grid.Row="3" Grid.Column="1" Margin="10,10,400,10" Content="Показать/Скрыть Логин" FontSize="16" Name="BtnEnableDisableLogin" Click="BtnEnableDisableLogin_Click"></Button>
         <Label Content="Офис:" Grid.Row="1" Margin="100,10,5,10"></Label>
-        <ComboBox Grid.Row="1" Grid.Column="1" Margin="5,5,400,5" Name="CbNameOffices" DisplayMemberPath="Title" SelectionChanged="CbNameOffices_SelectionChanged"></ComboBox>
+        <ComboBox Grid.Row="1" Grid.Column="1" Margin="5,5,400,5" SelectedIndex="0" Name="CbNameOffices" DisplayMemberPath="Title" SelectionChanged="CbNameOffices_SelectionChanged"></ComboBox>
         <ToolBar Height="30" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <ToggleButton x:Name="TBAdd" Content="Add user" Click="TBAdd_Click"></ToggleButton>
             <Separator>

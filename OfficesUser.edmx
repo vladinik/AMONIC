@@ -50,8 +50,8 @@
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Ofice" Type="int" Nullable="false" />
-          <Property Name="DateBirth" Type="date" Nullable="false" />
-          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="DateBirth" Type="date" />
+          <Property Name="Active" Type="bit" />
         </EntityType>
         <Association Name="FK_Offices_Country">
           <End Role="Country" Type="Self.Country" Multiplicity="1" />
@@ -147,12 +147,12 @@
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="Role" Type="Int32" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Ofice" Type="Int32" Nullable="false" />
-          <Property Name="DateBirth" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="DateBirth" Type="DateTime" Nullable="true" Precision="0" />
+          <Property Name="Active" Type="Boolean" Nullable="true" />
           <NavigationProperty Name="Offices" Relationship="Self.FK_Users_Offices" FromRole="Users" ToRole="Offices" />
           <NavigationProperty Name="UserRole" Relationship="Self.FK_Users_UserRole" FromRole="Users" ToRole="UserRole" />
         </EntityType>
