@@ -11,6 +11,7 @@ namespace AMONIC
     {
         public static UserOficeEntities userOficeEntities;
         public static Users currentUser;
+        public static UserActivity currentUserActivity;
         public static UserOficeEntities GetEntities()
         {
             if (userOficeEntities == null)

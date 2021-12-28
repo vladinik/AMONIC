@@ -27,13 +27,6 @@ namespace AMONIC
         {
 
             InitializeComponent();
-            //var usersList = Helper.GetEntities().Users.ToList();
-            //using (UserOficeEntities db = new UserOficeEntities())
-            //{
-            //    Users users = new Users();
-                
-            //}
-            //DgListUser.ItemsSource = usersList;
             
             var cbm = Helper.GetEntities().Offices.ToList();
             cbm.Insert(0, new Offices() { Title = "Все группы" });

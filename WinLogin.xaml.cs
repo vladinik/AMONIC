@@ -82,17 +82,24 @@ namespace AMONIC
             }
             if (user.Role == 2)
             {
+                UserActivity activity = new UserActivity()
+                {
+                    IDUser = user.ID,
+                    LoginTime = DateTime.Now,
+                };
+                Helper.GetEntities().UserActivity.Add(activity);
+                Helper.GetEntities().SaveChanges();
+                Helper.currentUserActivity = activity;
                 WinUser winUser = new WinUser();
                 winUser.Show();
-                this.Close();
             }
+            Close();
         }
 
         private void BTNExtin_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Hide();
+            
+            Application.Current.Shutdown();
         }
     }
 }

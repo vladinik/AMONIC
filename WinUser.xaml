@@ -18,9 +18,40 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="TBExit" VerticalAlignment="Center" Text="Exit"></TextBlock>
-        <TextBlock Text="" VerticalAlignment="Center" Name="TB1" Grid.Column="0" Grid.Row="1"></TextBlock>
+        <TextBlock Name="TBExit" VerticalAlignment="Center" PreviewMouseLeftButtonDown="TBExit_PreviewMouseLeftButtonDown" Text="Exit"></TextBlock>
+        <TextBlock Text="" VerticalAlignment="Center" Name="TB1" Grid.Column="0"  Grid.Row="1"></TextBlock>
         <TextBlock Text="" VerticalAlignment="Center" Name="TB2" Grid.Column="1" Grid.Row="2"></TextBlock>
-        <TextBlock Text="" VerticalAlignment="Center" Name="TB3" Grid.Column="1" Grid.Row="2"></TextBlock>
+        <TextBlock Text="" VerticalAlignment="Center" Name="TB3" Grid.Column="2" Grid.Row="2"></TextBlock>
+        <DataGrid Name="DGUser" Grid.Row="4" Grid.ColumnSpan="3" Margin="20" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsNotReason}" Value="false">
+                            <Setter Property="Background" Value="Red"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0:MM/dd/yyyy}-{1:MM/dd/yyyy}">
+                                        <Binding Path="LoginTime"></Binding>
+                                        <Binding Path="LogutTime"></Binding>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Login time" Binding="{Binding LoginTime,StringFormat=hh:mm}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Logout time" Binding="{Binding LogutTime,StringFormat=hh:mm,TargetNullValue=**}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Time spent on system" Binding="{Binding TimeSpent,StringFormat=hh\\:mm\\:ss,TargetNullValue=**}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Unseccessfull logount reason" Binding="{Binding Reason}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

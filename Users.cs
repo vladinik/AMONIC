@@ -14,6 +14,12 @@ namespace AMONIC
     
     public partial class Users
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Users()
+        {
+            this.UserActivity = new HashSet<UserActivity>();
+        }
+    
         public int ID { get; set; }
         public int Role { get; set; }
         public string Email { get; set; }
@@ -25,6 +31,8 @@ namespace AMONIC
         public Nullable<bool> Active { get; set; }
     
         public virtual Offices Offices { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserActivity> UserActivity { get; set; }
         public virtual UserRole UserRole { get; set; }
     }
 }

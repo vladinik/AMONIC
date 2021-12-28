@@ -80,6 +80,9 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserActivity.cs">
+      <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserRole.cs">
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
