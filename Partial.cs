@@ -43,4 +43,24 @@ namespace AMONIC
             }
         }
     }
+    public partial class Schedules
+    {
+        public double BisinessPrice
+        {
+            get
+            {
+                return Math.Truncate(Convert.ToDouble(EconomyPrice) * 1.35);
+            }
+        }
+    }
+    public partial class Schedules
+    {
+        public double FirstClassPrice
+        {
+            get
+            {
+                return Math.Truncate(Convert.ToDouble(BisinessPrice) * 1.3);
+            }
+        }
+    }
 }

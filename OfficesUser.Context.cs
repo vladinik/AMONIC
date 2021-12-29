@@ -25,8 +25,12 @@ namespace AMONIC
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Aircrafts> Aircrafts { get; set; }
+        public virtual DbSet<Airports> Airports { get; set; }
         public virtual DbSet<Country> Country { get; set; }
         public virtual DbSet<Offices> Offices { get; set; }
+        public virtual DbSet<Routes> Routes { get; set; }
+        public virtual DbSet<Schedules> Schedules { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserActivity> UserActivity { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }

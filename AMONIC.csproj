@@ -64,6 +64,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Aircrafts.cs">
+      <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Airports.cs">
+      <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
@@ -77,6 +83,12 @@
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
     <Compile Include="Partial.cs" />
+    <Compile Include="Routes.cs">
+      <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schedules.cs">
+      <DependentUpon>OfficesUser.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>OfficesUser.tt</DependentUpon>
     </Compile>
@@ -97,6 +109,9 @@
     </Compile>
     <Compile Include="WinLogin.xaml.cs">
       <DependentUpon>WinLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinManageWindow.xaml.cs">
+      <DependentUpon>WinManageWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinUser.xaml.cs">
       <DependentUpon>WinUser.xaml</DependentUpon>
@@ -122,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinManageWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

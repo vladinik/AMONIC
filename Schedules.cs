@@ -12,21 +12,18 @@ namespace AMONIC
     using System;
     using System.Collections.Generic;
     
-    public partial class Country
+    public partial class Schedules
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Country()
-        {
-            this.Airports = new HashSet<Airports>();
-            this.Offices = new HashSet<Offices>();
-        }
-    
         public int ID { get; set; }
-        public string Name { get; set; }
+        public System.DateTime Date { get; set; }
+        public System.DateTime Time { get; set; }
+        public int AircraftID { get; set; }
+        public int RouteID { get; set; }
+        public string FlightNumder { get; set; }
+        public decimal EconomyPrice { get; set; }
+        public string Confirmed { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Airports> Airports { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Offices> Offices { get; set; }
+        public virtual Aircrafts Aircrafts { get; set; }
+        public virtual Routes Routes { get; set; }
     }
 }
